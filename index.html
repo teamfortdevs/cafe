@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cafe Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/gif" href="https://img.icons8.com/ios-filled/50/e6b325/cafe.png" sizes="16x16">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Navbar (sit on top) -->
+<div class="w3-top" style="background-color: rgba(0,0,0,0.6);">
+  <div class="w3-bar w3-card w3-padding"  id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-text-white w3-btn w3-wide"><b>ZD's <span class="cafe-text-color">Cafe  <i class="fa fa-coffee"></span></i></b></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#home" class="w3-bar-item w3-btn w3-text-white"><i class="fa fa-home"></i> HOME</a>
+      <a href="#about" class="w3-bar-item w3-btn w3-text-white"><i class="fa fa-user"></i> ABOUT</a>
+      <a href="#menu" class="w3-bar-item w3-btn w3-text-white"></i><i class="fa fa-file-text-o"></i> MENU</a>
+      <a href="#where" class="w3-bar-item w3-btn w3-text-white"><i class="fa fa-location-arrow"></i> WHERE</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-btn w3-text-white w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-btn w3-large w3-padding-16">Close ×</a>
+  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-btn">HOME</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-btn">ABOUT</a>
+  <a href="#menu" onclick="w3_close()" class="w3-bar-item w3-btn">MENU</a>
+  <a href="#where" onclick="w3_close()" class="w3-bar-item w3-btn">WHERE</a>
+</nav>
+<!-- Header with image -->
+<header class="bgimg w3-display-container" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag w3-large w3-text-black cafe-bg-color">Open from 10am to 8pm</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="cafe-home-text-color" style="font-size:100px">ZD's Cafe</span><br>
+    <span class="w3-xlarge w3-text-white" style="text-shadow: 2px 1px black;">Continuing to inspire and nurture the human spirit–one person, one cup and one neighborhood at a time.</span><br>
+    <a href="#where" class="w3-btn w3-border w3-round-xxlarge w3-border-white w3-large w3-text-black btn-cafe" style="background-color:#E6B325!important;">GET IN TOUCH <i class="fa fa-coffee"></i></a>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white w3-large">Phase 2, Santa Maria Subdivision</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h3 class="w3-center w3-padding-64"><span class="w3-tag w3-wide w3-text-black cafe-bg-color">ABOUT CAFE</span></h3>
+    <p>The <span class="cafe-text-color">ZD's Cafe</span> was founded in San Mateo by Mr. Kim in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey" style="border-color: #e6b325!important;">
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+      <p>Chef, Coffeeist and Owner: Liam Brown</p>
+    </div>
+    <img src="img/cafe-bg-6.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong class="cafe-text-color">Opening hours:</strong> everyday from 10am to 8pm.</p>
+    <p><strong class="cafe-text-color">Address:</strong> Phase 2, Santa Maria Subdivision, PH</p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container bgimg-2 w3-text-white" id="menu">
+  <div class="w3-content" style="max-width:700px;">
+ 
+    <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-text-black" style="background-color: #E6B325;">OUR MENU</span></h3>
+  
+    <div class="w3-row w3-center w3-card w3-padding" style=" background-color:rgba(0,0,0,0.8);">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Eat</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Drink</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card" style="background-color:rgba(0,0,0,0.7);">
+      <h5 class="cafe-text-color">Bread Basket</h5>
+      <p class="w3-text-white">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+    
+      <h5 class="cafe-text-color">Honey Almond Granola with Fruits</h5>
+      <p class="w3-text-white">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+    
+      <h5 class="cafe-text-color">Belgian Waffle</h5>
+      <p class="w3-text-white">Vanilla flavored batter with malted flour 7.50</p><br>
+    
+      <h5 class="cafe-text-color">Scrambled eggs</h5>
+      <p class="w3-text-white">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+    
+      <h5 class="cafe-text-color">Blueberry Pancakes</h5>
+      <p class="w3-text-white">With syrup, butter and lots of berries 8.50</p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card" style="background-color:rgba(0,0,0,0.7);">
+      <h5 class="cafe-text-color">Coffee</h5>
+      <p>Regular coffee 2.50</p><br>
+    
+      <h5 class="cafe-text-color">Chocolato</h5>
+      <p>Chocolate espresso with milk 4.50</p><br>
+    
+      <h5 class="cafe-text-color">Corretto</h5>
+      <p>Whiskey and coffee 5.00</p><br>
+    
+      <h5 class="cafe-text-color">Iced tea</h5>
+      <p>Hot tea, except not hot 3.00</p><br>
+    
+      <h5 class="cafe-text-color">Soda</h5>
+      <p>Coke, Sprite, Fanta, etc. 2.50</p>
+    </div>  
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h3 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-text-black cafe-bg-color">FIND US</span></h3>
+    <p>Find us at some address at some place.</p>
+    <img src="img/cafe-bg-8.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag cafe-bg-color w3-text-black">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p><strong class="cafe-text-color">Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-btn w3-round-large cafe-bg-color" type="submit">SEND MESSAGE <i class="fa fa-coffee" style="color:#5b460b"></i></button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-text-white w3-padding-48 w3-large" style="background-color:#222222;">
+  <p>Copyright © 2022. All Rights Reserved.</p>
+  <p>Zach Developer - <span class="cafe-text-color">Cafe Shop <i class="fa fa-coffee"></i></span></p>
+  <a class="w3-bar-item w3-btn"><i class="fa fa-facebook-f"></i></a>
+    <a class="w3-bar-item w3-btn"><i class="fa fa-twitter"></i></a>
+    <a class="w3-bar-item w3-btn"><i class="fa fa-instagram"></i></a>
+    <a class="w3-bar-item w3-btn"><i class="fa fa-whatsapp"></i></a>
+    <a class="w3-bar-item w3-btn"><i class="fa fa-snapchat-ghost"></i></a>
+  <div class="w3-container">
+    
+
+  </div>
+</footer>
+<script src="js/script.js"></script>
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+html {
+    scroll-behavior: smooth;
+}
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/cafe-bg-5.jpg");
+  height: 100%;
+}
+
+.bgimg-2 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/cafe-bg-7.jpg");
+    height: 100%; 
+}
+
+.menu {
+  display: none;
+}
+
+.cafe-home-text-color {
+    color:#E6B325!important;
+    text-shadow: 4px 2px black;
+}
+
+.cafe-text-color {
+    color: #E6B325; 
+}
+.cafe-bg-color {
+    background-color: #E6B325;
+}
+
+.btn-cafe:hover {
+    color: white!important;
+    background-color: rgba(0,0,0,0.3)!important;
+    transition: 0.5s ease!important;
+}
+footer a:hover {
+    color: #E6B325!important;
+    transition: 0.5s ease;
+}
+
+#myNavbar a:hover {
+  color: #E6B325!important;
+    transition: 0.5s ease;
+}
